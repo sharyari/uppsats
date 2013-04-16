@@ -121,9 +121,36 @@ escapeinside={\#*}{\^^M}
 
 
 \section{Summary}
+The traditional methods for human machine interaction might be unavailable to persons with physical handicaps. For these persons other means of interacting with a computer is needed. The paper describes a gaze communication interface, where the user uses their eyes to control the computer. This is done by using the SSR algorithm to detect the face of the user and controlling the mouse cursor via eye movements. This article investigates the success rate and accuracy of the system depending on user movement, light conditions, background noise, involuntary blinking and video frame rate.
+The goal is to create a system that can run in realtime on a standard desktop computer with a good enough accuracy rate for regular use. The system only uses the built in web cam of most modern displays and works with minimal configuration.
+
 
 \section{Content}
-The article describes an input method especially designed for disabled people, with the ability to voluntarily control their eye movements, more specifically their blinking. This is motivated by the fact that the ability to control ones blinking is the last voluntary action of which one loses control. 
+The article describes an input method especially designed for disabled people, with the ability to voluntarily control their eye movements, more specifically their blinking. This is motivated by the fact that the ability to control ones blinking is the last voluntary action of which one loses control of [REFERENCE]. The method relies on facial feature recognition in order to correctly recognise the face and tracking the head position. Having fixed the facial features, eye movements are used to steer the cursor. A click in the user interface is divided into primary and secondary clicking (left- and right mouse button). The primary action is defined as keeping the eye focused on a point on the display for 0.500 s, since a involuntary click can be registered at a time shorter than 0.300 (TODO eller om det var 0.400) [REFERENCE?]. The secondary action is defined as blinking. This implies that the system must be able to differentiate between voluntary and non-voluntary blinking. The offset for a secondary action was defined as 0.500 seconds, since involuntary eye blinks are typically about 0.300 s long [REFERENCE].
+
+An important property of the design is the goal of creating a simple, cheap and easily accessible system. In order to achieve simplicity, the system is designed as to not rely on a specifically designed head apparatus as has been suggested in previous systems. [REFERENCE] To keep the system cheap and accessible, it is designed to rely only on a webcam and the computations necessary to determine the point on the screen at which the user focuses has to take up a minimal amount of processing power of a standard desktop computer. 
+
+This has been achieved by using the Six Segment Rectangular filter [REFERENCE]. The idea is to devide the section of the face containing the nose and the eyes into six adjacent rectangular sections; two containing the eyes, one the middle of the eyes, one containing the nose and the remaining two the cheeks. By identifying the nose tip, and the area in the middle of the eyes using face characteristics, the position of the eyes can be reliably found using the fact that the eyes are symmetrically positioned and in a right angle from the line connecting the two points.
+
+For the input method to be usable in as many areas as possible it should not depend on any specific lighting conditions. However the current implementation requires the light to be distributed evenly over the face to avoid false positives when detecting the face.
+
+It is not specific for the user, but can be used by anyone after a short face detection process - keeping the system easily accessible.
+
+The article is a practical paper focusing mostly on the technical base of the system, which was implemented and tested on a sample group. // DET HÄR BORDE STÅ NÅGONSTANS, MEN INTE JUST HÄR
+
+In order to assess the effectiveness of the system, a set of mathematical formulas for grading were presented. These forumulas use the number of false positive, false negative and true positive blinks registered, when comparing registered eye-blinks with actual eye-blinks that can be seen on video-tapings of the sessions. Although the methodology is well-described, there is no section presenting the actual result values of this testing - neither in general or for specific subjects.
+
+Despite the lack of technical data, it is claimed that the developed system is able to accurately detect facial features (part of the required initialization and re-initialization process) regardless of skin colour and whether the subject is wearing glasses or not. It is also claimed that tracking the face is accurate if the light is evenly distributed on the face and the webcam had an FPS-rate above 20. When the subject was wearing glasses, the system ocitta rätt sak i referenslistan givet en citering i huvudtcasionally lost track of the target due to light reflections from the glasses.
+
+The presentation of previous related work is relatively rigorous in this paper. Design choices are justified by results of previous research, and in most cases alternative methods are also presented together with a motivation behind the choice made. The same scientific quality is unfortunately not provided in the presentation of results, as it is not backed with measurement data. It is therefore difficult to say whether the conclusions drawn are reasonable or just a matter of opinion.
+
+\section{Article Quality}
+The article is well-written, using a precise and concise language. Abbreviations are avoided unless previously defined and the misspellings in the text are presumably due to the fact that the article has been digitalized from paper. The topic describes the content well and a idea of the content can be formed reading only the title and the abstract. The abstract says little about the drawn results, and the usefulness of the developed system. This reflects the greater flaws in the article as a whole; the result section is not informative enough and nothing is said about the usefulness of the system. It would have been preferable if the system had been in some way compared to alternative tools (a few alternatives were mentioned in the article), and if there had been a proposition for further work.
+
+From this it is clear that the main focus of their project has been the actual implementation of the interface, which is reflected by the detailed technical specifications provided. The text body is well structured with informative section titles, allowing the reader to follow the text in a natural way.
+
+In general we found this article well-written and helpful as it gave us an good overall understanding of recent research on this subject, and several references to other articles that might be of interest. We believe this article could be of interest to others interested in the topic of facial-feature based interfaces, and we would recommend the interested reader to read at least the introduction section for references and ideas.
+
 
 
 
