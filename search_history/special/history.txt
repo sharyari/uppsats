@@ -1,0 +1,10 @@
+** SCOPUS
+
+TITLE-ABS-KEY(blind AND Braille AND ("input device" OR peripheral OR interface OR "input method") AND computer) AND ( LIMIT-TO(SUBJAREA,"COMP" ) )
+
+** ACM
+
+
+** IEEE XPLORE
+
+
