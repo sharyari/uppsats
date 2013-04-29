@@ -58,25 +58,23 @@ One ambition is that of providing real-time subtitles to spoken text, for exampl
 
 While the computers have become powerful and cheap enough to make speech recognition broadly available recently, its history is much longer. The first working implementation was introduced by Bell Labs in 1952, building on Alexander Graham Bell's work on WAWAWA from 1874. Bell Labs' speech recognizer used METODNAMN, BESKRIVNING. This system had a success rate of around 97% [citation needed].
 
-Early speech recognition attemps were simple, and could not analyse sentenses. Instead, single words were compared to a rather small dictionary, compared to today. Hur många ord hade det första systemet? The user was forced to make a small pause between every word for the system to recognize them. 
+Early speech recognition attemps were simple, and could not analyse sentences. Instead, single words were compared to a rather small dictionary, compared to those used today. The Bell Labs system from 1952 was able to recognise the numbers 0 to 9, spoken by a single speaker.[citation B.H. Juang - Automatic Speech Recognition – A Brief History of the Technology Development] The user was forced to make a small pause between every word for the system to recognize them. 
 
-Another system worked by analysing phonems in the spoken text. Phonemes are the smallest building blocks of the language and consist of the individual sounds used to construct words and sentences[REFERENS TILL KOG.PSYK-boken]. The XXX system was likely the first such system, and could recognise 4 wovels and 9 consonants[citation needed]. By analyzing speech at this low level the system becomes less dependant on pauses and dialect in speech.
+Another system worked by analysing phonems in the spoken text. Phonemes are the smallest building blocks of the language and consist of the individual sounds used to construct words and sentences[REFERENS TILL KOG.PSYK-boken]. Early phonem-based techniques could only recognise a subset of phonemes. RCA Labs in 1956 could recognise 10 phonemes, spoken by a single speaker. Fry and Denes at the University College in England could recognise 4 wovels and 9 consonants. More notably, they were the first to incorporate statistical information in the analysis[Juang] - something that now is fundamental in speech recognition. By analyzing speech at this low level the system becomes less dependant on pauses and dialect in speech.
 
-In XXXX, the use of Markov Models was introduced in speech recognition. Markov models are statistical models BLABLABLABLABLABLALBLABLALBLABALBALBLABLBLABLALBAL GROUND-BREAKING BLABLA. The Markov Models use the statistical data to "guess" which phonem the user is saying, and the chain of phonems considered to be correct are then matched to a phonem-word database to decide which word the user has spoken. The Markov Model Speech Recognition systems "learn" the users voice and speech patterns by using the data from corrections to alter the statistics used to decide which phonem was spoken. 
+In XXXX, the use of Markov Models was introduced in speech recognition. Markov models are statistical models BLABLABLABLABLABLALBLABLALBLABALBALBLABLBLABLALBAL GROUND-BREAKING BLABLA. The Markov Models use previously gathered statistical data to with some certainty guess which phoneme the user is saying, and the chain of phonemes considered to be correct are then matched to a phoneme-word database to decide which word the user has spoken. The Markov Model Speech Recognition systems "learn" the users voice and speech patterns by using the data from corrections to alter the statistics used to decide which phoneme was spoken. 
 
 This next part will explain what markow chain thingies are, with a reference to the picture.
 
 Heres the picture.
 
-Most speech recognition software today use Hidden Markov Chains for speech analysis [ÅLANDS REFERENS]. 
+Most speech recognition software today use Hidden Markov Chains for speech analysis[ÅLANDS REFERENS], but recent research has shifted focus towards the user of a type of artificial neural network, called Deep Neural Networks (DNN). Neural networks have been used for speech recognition since the late 80's, but the use of DNN is the first that has been shown to have substantial benefits over the use of the traditional markov chain approach. A research collaboration around DNN exists between the University of Toronto, Microsoft, IBM and Google. Late 2012, Microsoft publicly demonstrated their work with speech recognition - a system that can translate spoken English into spokem Mandarin in real time and in the voice of the speaker. In conjunction with the demonstration, Microsofts chief researcher Rick Rashid says about DNNs: "While still far from perfect, this is the most dramatic change in accuracy since the introduction of hidden Markov modeling in 1979". [Ref:http://news.cnet.com/8301-10805_3-57547627-75/microsofts-new-translation-tech-speaks-chinese-in-your-own-voice/]
 
 In the 1990:s personal computers became fast enough to power speech recognition software. 
 
-Now we get to the future. I'll look into that. Toronto/MS/IBM/Google-artikeln.
 
-
-
-
+Referens BLABLA:
+A. Waibel, T. Hanazawa, G. Hinton, K. Shikano, and K. J. Lang, (1989) "Phoneme recognition using time-delay neural networks," IEEE Transactions on Acoustics, Speech and Signal Processing, vol. 37, pp. 328-339.
 
 \subsection{Discussion}
 
