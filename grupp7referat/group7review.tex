@@ -16,6 +16,7 @@
 \DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
+\usepackage{todonotes}
 \usepackage{alltt}
 \usepackage{listings}
  \usepackage{aeguill}
@@ -122,43 +123,33 @@ escapeinside={\#*}{\^^M}
 
 \section{Abstract}
 
-The role of computers is increasing in society whereas the cost of digital screens is decreasing. This has led to digital signage to become a part of the everyday landscape in society. Some companies would not benefit, or cannot affoard, owning their own digital signs and instead rent display time from a supplier. In many cases, such companies are interested in knowing where and when their ads are shown, and if possible who is watching and to what extent. This paper describes a general-purpose system to manage this type of statistical information, DynaStat, which works independent on the digital sign-system it is implemented in. Additionally, the authors have written an module that utilises the DynaStat system, to be used within an already existing system onboard the Arlanda Express trains. The article is yet only a draft, and the results are as of yet not apparent from the study.
+The role of computers is increasing in society whereas the cost of digital screens is decreasing. This has led to digital signage to become a part of the everyday landscape in society. Some companies would not benefit, or cannot afford, owning their own digital signs and instead rent display time from a supplier. In many cases, such companies are interested in knowing where and when their ads are shown, and if possible who is watching and to what extent. This paper describes a general-purpose system to manage this type of statistical information, DynaStat, which works independent on the digital sign-system it is implemented in. Additionally, the authors have written an module that utilises the DynaStat system, to be used within an already existing system on board the Arlanda Express trains. The article is yet only a draft, and the results are as of yet not apparent from the study.
 
 \section{Content}
 Digital signage is a growing field in marketing, and companies can often be interested in knowing the circumstances in which their ads are shown; the time, the place, the frequency and so on. This demand requires that the signage-system can manage additional statistical information - this is the gap that the described project aims to fill.
 
-The described system is named \emph{DynaStat}. The details of the system are not apparant from the article as of yet, but is claimed to provide a general system for statistical management that can be used by several digital signage-systems. DynaStat is the used by the authors and implemented as a module to the existing \emph{Cviewer} system on the Arlanda Express trains. A requirement for the implementation is that it can be done with minimal change to the existing system, as updating the existing system is difficult or not possible.
+The described system is named \emph{DynaStat}. The details of the system are not apparent from the article as of yet, but is claimed to provide a general system for statistical management that can be used by several digital signage-systems. DynaStat is the used by the authors and implemented as a module to the existing \emph{Cviewer} system on the Arlanda Express trains. A requirement for the implementation is that it can be done with minimal change to the existing system, as updating the existing system is difficult or not possible.
 
-Addtionally, the article thoroughly describes the procedure and intent of test-driven development. This section is a good description of the technique and easy to follow, but is not in any way connected to the rest of the article. 
-
-Titeln är lång, och lite otydlig. Vilka "siffror" är det som åsyftas?
+Additionally, the article thoroughly describes the procedure and intent of test-driven development. In TDD, the developers first define a set of test cases and their desired result. The program is considered to be ready when all test cases give the desired result when executed. The developer can then decide to create a new set of test cases, and develop the application further. This style of development has been shown to decrease the speed, but increase the coverage of the program during testing.
 
 
 \section{Article Quality}
-Basha på:
-stavfel
-upprepningar - särsilt "problemet"-sektionen borde fördelas på slutsats och introduktion. Problemet borde sägas mer koncist och tydligt.
-Referenser ok, förutom D. Lager, E. Björklund där man inte ser vad det är. De borde inte refereras till i parenteser - man ska kunna läsa...
-Brasklappar om att vi inte kan säga så mycket, för att de inte sagt så mycket.
+This article is yet a draft, without an abstract and the results of the project are not presented. There are a few minor misspellings in the text, which is understandable as the text has yet to be worked on. There are much repetitions within the text, mainly in the section ``problemet''. This section does not actually describe the problem the authors are trying to solve, as the name of the section implies it should. A suggestion would be to move most of the information in that section to the introduction or to the body of the report, and keep the problem formulation concise and precise.
 
+A section in the article describes test-driven development. The section is well-written and serves as a good explanation of the main principles of the technique, but it is not apparent from the text how it is connected to project. It is left to the reader to assume that the authors have used this development style, but this is not stated in the paper. Neither is the benefits of TDD to this particular project.
 
-Inte basha på:
-Bra flow i texten.
-Ser ut att vara ett bra upplägg, även om det inte är färdigt. [brasklapp 2 alltså].
+The references in the article are mainly from respected journals, and well-formatted with the exception of one reference (D. Lager, E. Björklund). The referencing style within the text can at times break the in general good tex flow of the article. When references are written within parenthesis, it can lead to confusion as the text continues \emph{into} the parenthesis going against the norm that a sentence can be read even if the parenthesis is skipped.
 
-The article is well-written, using a precise and concise language. Abbreviations are avoided unless previously defined and the misspellings in the text are presumably due to the fact that the article has been digitalized from paper. The topic describes the content well and an idea of the content can be formed reading only the title and the abstract. The abstract says little about the drawn results, and the usefulness of the developed system. This reflects the greater flaws in the article as a whole; the result section is not informative enough and no analysis of the usefulness of the system is presented. Although a few alternative systems were mentioned in the article, it would have been preferable if comparison testing had been performed in order to assess the quality of the developed system. From the article it is not indicated if the system is ready to be deployed or if further work is needed.
-
-The presentation of previous related work is relatively rigorous in this paper. Design choices are justified by results of previous research, and in most cases alternative methods are also presented together with a motivation behind the choice made. The same scientific quality is unfortunately not provided in the presentation of results, as it is not backed with measurement data. It is therefore difficult to say whether the conclusions are reasonable or just a matter of opinion.
-
-
-From this it is clear that the main focus of their project has been the actual implementation of the interface, which is reflected by the detailed technical specifications provided. The text body is well structured with informative section titles, allowing the reader to follow the text in a natural way. 
+It is unclear in the title of the article which \emph{numbers} are meant, but the style of the title in general is good as it attempts to engages the reader.
 
 
 \section{Summary}
-[Här är brasklapp 3 om att vi skriver skit för att de skrev mer skit].
-The article describes an inexpensive and easy to use system for controlling a computer with eye movements. The system doesn't use any wearable equipment, instead it uses cameras that pinpoint the position of the eyes and nosetip. This information is then used to guide the mouse cursor on the computer, using eye blinks to emulate "clicks". The methodology for deciding if the system is effective is well described and although no data is presented. The input technique described has already been described in earlier work, and with the given information we cannot determine whether the system is better than those earlier described, other than the fact that it is claimed to be effective by the authors themselves.
+This article describes a system for managing statistical information for digital signs, DynaStat. It does not rely on a specific system to be used, but can be implemented to work with various methods of digital sign control, thus DynaStat is a somewhat general system. The type of information can be more or less important for the companies using digital signage for advertisment, depending on the nature of the product being advertised.
 
-In general we found this article well-written and helpful as it gave us an good overall understanding of recent research on this subject, and several references to other articles that might be of interest. We believe this article could be of interest to others interested in the topic of facial-feature based interfaces, and we would recommend the interested reader to read at least the introduction section for references and ideas.
+The reviewed paper is still a draft on an early stage, and it is difficult to determine what the results are, and the quality of the results. It is indicated, but not clearly stated, that the system has already been successfully developed. It is also left to the reader to guess whether this system is actually going to be used on the mentioned Arlanda Express trains or not, and if so, what the connection is between the authors and the company.
+
+
+\todo{In general we found this article well-written and helpful as it gave us an good overall understanding of recent research on this subject, and several references to other articles that might be of interest. We believe this article could be of interest to others interested in the topic of facial-feature based interfaces, and we would recommend the interested reader to read at least the introduction section for references and ideas.}
 
 
 \end{document}
