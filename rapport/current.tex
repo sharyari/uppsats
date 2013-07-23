@@ -1,7 +1,7 @@
 % !TEX root = rapport.tex
 \section{Contemporary devices}
 \label{current}
-Several input devices in this paper such as the keyboard and the mouse, are still wildely used today but can be seen as historical devices. This is justified by the fact that they remain largely unchanged -- if not in their physical design then in the fashion they are used. On the other hand, a number of other input/output devices that can be seen as recent have a long history behind them. Although \emph{touchpads}, \emph{touchscreens} and \emph{speech recognition} techniques were researched as far back as the 1960's~\cite{buxton,shoebox}, they have only now began to see commercial use and have likely still not reached their "peak". 
+Several input devices in this paper such as the keyboard and the mouse, are still widely used today but can be seen as historical devices. This is justified by the fact that they remain largely unchanged -- if not in their physical design then in the fashion they are used. On the other hand, a number of other input/output devices that can be seen as recent have a long history behind them. Although \emph{touchpads}, \emph{touchscreens} and \emph{speech recognition} techniques were researched as far back as the 1960's~\cite{buxton,shoebox}, they have only now began to see commercial use and have likely still not reached their "peak". 
 
 
 \subsection{Touch devices}
@@ -15,7 +15,7 @@ One of the first mentions of touchscreens was by E.A. Johnson in 1965, describin
 \label{platoIV}
 \end{figure}
 
-The initial uses of touchscreens were point-to-select systems used in for example ATM machines or cash registers in restaurants and were relatively non-demanding on the screen performance~\cite{buxton}. There were also early attemps to make \emph{PDAs}\footnote{Personal Digital Assistant}. The first products to enter the market were the Palm Zoomer and the IBM Simon. The Simon was a mobile phone without any physical buttons, having only a touchscreen interface. Beyond regular telephone capabilities, it could also manage information such as a phonebook and be used for drawing and taking notes. Due to this, it is sometimes refered to as the first \emph{smartphone}~\cite{buxton}.
+The initial uses of touchscreens were point-to-select systems used in for example ATM machines or cash registers in restaurants and were relatively non-demanding on the screen performance~\cite{buxton}. There were also early attemps to make \emph{PDAs} (Personal Digital Assistant). The first products to enter the market were the Palm Zoomer and the IBM Simon. The Simon was a mobile phone without any physical buttons, having only a touchscreen interface. Beyond regular telephone capabilities, it could also manage information such as a phonebook and be used for drawing and taking notes. Due to this, it is sometimes refered to as the first \emph{smartphone}~\cite{buxton}.
 
 Smartphones have seen much development since the release of the Simon, and today it is estimated that more than a billion people use smartphones~\cite{billion1, billion2}. This is largely due to the recent popularisation of the iOS and Android operating systems.
 
@@ -35,20 +35,20 @@ A common application of smart devices is to read e-books. On a traditional compu
 
 \subsection{Voice recognition}
 
-Voice recognition is another input method that has become increasingly popular in the last years. This input method uses speech recognition by analyzing input from a microphone. Once the spoke word has been analysed, it can be used in several ways.
+Voice recognition is another input method that has become increasingly popular in the last years. This input method uses speech recognition by analyzing input from a microphone. Once the spoken word has been analysed, it can be used in several ways.
 
 One ambition is to provide real-time subtitles to spoken text, for example to aid those with hearing disorders. As an input method, the sound input can be parsed by the computer and then trigger a predefined action. This type of speech recognition has recently seen big progress, and is growing in popularity. For example, in the past years Microsoft presented an English to synthesised speech Chinese translator, working in real time and Apple has introduced the \emph{Siri} speech recognition system in their handheld devices.\\
 
 While computers have only recently become powerful and cheap enough to make speech recognition broadly available, its history is much longer. The first working implementation was introduced by Bell Labs in 1952~\cite{Davis52}. It could not analyse sentences, instead single words were compared to a small dictionary, the numbers 0 to 9, spoken by a single speaker~\cite{juang}. The user was also required to make a small pause between every word for the system to recognize them.
 
-Other systems analysed \emph{phonems}\footnote{Phonemes are the smallest building blocks of the language and consist of the individual sounds used to construct words and sentences} in the spoken text. Early phonem-based techniques could only recognise a subset of phonemes; RCA Labs in 1956 could recognise ten phonemes, spoken by a single speaker, Fry and Denes at the University College in England could recognise 4 wovels and 9 consonants. More notably, they were the first to incorporate statistical information in the analysis~\cite{juang}, something that now is fundamental in speech recognition. By analyzing speech at this low level the system becomes less dependant on pauses and dialect in speech.
+Other systems analysed \emph{phonemes}\footnote{Phonemes are the smallest building blocks of the language and consist of the individual sounds used to construct words and sentences} in the spoken text. Early phoneme-based techniques could only recognise a subset of phonemes; RCA Labs in 1956 could recognise ten phonemes, spoken by a single speaker, Fry and Denes at the University College in England could recognise 4 wovels and 9 consonants. More notably, they were the first to incorporate statistical information in the analysis~\cite{juang}, something that now is fundamental in speech recognition. By analysing speech at this low level the system becomes less dependant on pauses and dialect in speech.
 
-In the 1980's, the use of \emph{Hidden Markov Models} was introduced in speech recognition~\cite{rabiner1986introduction}. The Markov Models use previously gathered statistical data to with some certainty guess which phoneme the user is saying, and the chain of phonemes considered to be correct are then matched to a phoneme-word database to decide which word the user has spoken. The context of the word is also taken into account to prevent homonyms of the desired word to be entered instead. The Markov Model Speech Recognition systems ``learn'' the users voice and speech patterns by using the data from corrections to alter the statistics used to decide which phoneme was spoken.
+In the 1980's, the use of \emph{Hidden Markov Models} was introduced in speech recognition~\cite{rabiner1986introduction}. The Markov Models use previously gathered statistical data to with some certainty guess which phoneme the user is saying, and the chain of phonemes considered to be correct are then matched to a phoneme-word database to decide which word the user has spoken, see figure \ref{tomato}. The context of the word is also taken into account to prevent homonyms of the desired word to be entered instead. The Markov Model Speech Recognition systems ``learn'' the users voice and speech patterns by using the data from corrections to alter the statistics used to decide which phoneme was spoken.
 
 \begin{figure}[]
 \includegraphics[width=0.8\textwidth] {bilder/tomato.jpg}
 \caption{A model describing the statistical values of phoneme input of the word \emph{tomato}. The model contains american and british english pronounciations, with a small statistical favor of the british accent.}
-\label{ibooks}
+\label{tomato}
 \end{figure}
 
 Most speech recognition software today use Hidden Markov Models for speech analysis~\cite{DNN}, but recent research has shifted focus towards the use of a type of artificial neural network, called Deep Neural Networks (DNN). Neural networks have been used for speech recognition since the late 80's~\cite{waibel:phoneme}, but the use of DNN is the first that has been shown to have substantial benefits over the use of the traditional Markov model approach.
